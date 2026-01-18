@@ -42,6 +42,5 @@
     obsidian # Note taking application
     bruno # Testing HTTP API
     google-chrome # Browser
-    cameractrls # Camera Controll App
   ];
 }

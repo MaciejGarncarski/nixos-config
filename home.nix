@@ -16,10 +16,11 @@
       {
         home.stateVersion = "25.11";
         
-        # Coding
+        # Additional Packages
         home.packages = with pkgs; [
           vscode
           bun
+          discord
           mise
         ];
         
