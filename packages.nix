@@ -16,6 +16,12 @@
 
   nixpkgs.config.allowUnfree = true;
 
+  fonts.packages = with pkgs; [
+    monaspace
+    fira-code
+    fira-code-symbols
+  ];
+
   environment.systemPackages = with pkgs; [
     docker-compose
     btop
