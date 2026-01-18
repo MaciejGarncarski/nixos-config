@@ -6,5 +6,6 @@
     ./nvidia.nix
     ./obs.nix
     ./packages.nix
+    ./zsh.nix
   ];
 }

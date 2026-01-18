@@ -1,7 +1,10 @@
 { username, ... }:
 {
-
   home-manager = {
+    backupFileExtension = "bkup";
+    useGlobalPkgs = true;
+    useUserPackages = true;
+
     users.${username} =
       {
         inputs,
@@ -20,6 +23,28 @@
           mise
         ];
         
+        programs.eza = {
+          enable = true;
+          enableZshIntegration = true;
+          enableBashIntegration = true;
+          extraOptions = [
+            "--icons"
+            "--git"
+          ];
+        };
+
+        programs.bat = {
+          enable = true;
+          config = {
+            pager = "less -FR";
+          };
+          extraPackages = with pkgs.bat-extras; [
+            batman
+            batpipe
+            # batgrep
+          ];
+        };
+
         # Git Configuration
         programs.git = {
           enable = true;
