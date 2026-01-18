@@ -22,6 +22,16 @@
           bun
           discord
           mise
+          lazygit
+          ripgrep
+          lazydocker
+          fd
+          tree
+          tldr
+          diff-so-fancy
+          nixfmt
+          nh
+          nix-output-monitor
         ];
         
         programs.eza = {
