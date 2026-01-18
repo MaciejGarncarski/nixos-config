@@ -35,12 +35,13 @@
   # You can disable this if you're only using the Wayland session.
   services.xserver.enable = true;
 
-  services.displayManager.cosmic-greeter.enable = true;
+  # Cosmic DE
+  services.desktopManager.cosmic.enable = false;
+  services.displayManager.cosmic-greeter.enable = false;
 
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.enable = true;
-  services.desktopManager.cosmic.enable = true;
-  services.desktopManager.plasma6.enable = false;
+  services.desktopManager.plasma6.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -77,15 +78,7 @@
   };
 
   users.defaultUserShell = pkgs.zsh;
-
   nixpkgs.config.allowUnfree = true;
-
-  environment.systemPackages = with pkgs; [
-    google-chrome
-    bun
-    mise
-  ];
-
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

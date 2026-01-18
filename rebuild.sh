@@ -1,1 +1,1 @@
-sudo nixos-rebuild switch --flake .#my-pc
+sudo nixos-rebuild switch --flake .#desktop
