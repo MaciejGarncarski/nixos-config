@@ -10,14 +10,6 @@
       ./hardware-configuration.nix
     ];
 
-  # Bootloader.
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/sda";
-  boot.loader.grub.useOSProber = true;
-
-  # Use latest kernel.
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-
   networking.hostName = "mcg";
   networking.networkmanager.enable = true;
 
@@ -77,7 +69,7 @@
   users.users.maciek = {
     isNormalUser = true;
     description = "maciek";
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
+    extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
     #  kdePackages.kate
     #  thunderbird
@@ -94,22 +86,6 @@
     mise
   ];
 
-
-  hardware.nvidia = {
-    modesetting.enable = true;
-    powerManagement.enable = false;
-    open = false; # Use the proprietary driver
-    nvidiaSettings = true;
-  };
-
-
-  #DOCKER
-  virtualisation.docker.enable = true;
-  
-  virtualisation.docker.rootless = {
-    enable = true;
-    setSocketVariable = true;
-  };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
