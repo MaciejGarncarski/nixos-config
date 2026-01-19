@@ -15,7 +15,7 @@
       }:
       {
         home.stateVersion = "25.11";
-        
+
         # Additional Packages
         home.packages = with pkgs; [
           vscode
@@ -33,7 +33,7 @@
           nh
           nix-output-monitor
         ];
-        
+
         programs.eza = {
           enable = true;
           enableZshIntegration = true;
@@ -52,7 +52,7 @@
           extraPackages = with pkgs.bat-extras; [
             batman
             batpipe
-            # batgrep
+            batgrep
           ];
         };
 
