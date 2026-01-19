@@ -4,7 +4,7 @@ Use my config
 
 ```bash
 
-git clone https://github.com/MaciejGarncarski/nixos-config.git ~/.nixos-config
+git clone https://github.com/MaciejGarncarski/nix-config.git ~/.nix-config
 
 ```
 
@@ -16,12 +16,12 @@ nixos-generate-config --show-hardware-config > hardware-configuration.nix
 
 ```
 
-# 4. Rebuild nixOS
+# 4. Rebuild
 
 ```bash
 
-chmod +x ~/.nixos-config/rebuild.sh
+chmod +x ~/.nix-config/rebuild.sh
 
-cd ~/.nixos-config && ./rebuild.sh
+cd ~/.nix-config && ./rebuild.sh
 
 ```
