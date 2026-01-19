@@ -4,8 +4,8 @@
   services.xserver.enable = false;
 
   # Cosmic DE
-  services.desktopManager.cosmic.enable = false;
-  services.displayManager.cosmic-greeter.enable = false;
+  # services.desktopManager.cosmic.enable = false;
+  # services.displayManager.cosmic-greeter.enable = false;
 
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.wayland.enable = true;
