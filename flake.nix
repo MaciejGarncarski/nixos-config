@@ -35,7 +35,7 @@
               home-manager.useUserPackages = true;
               home-manager.extraSpecialArgs = specialArgs;
             }
-            ./modules/home.nix
+            ./home-manager/home.nix
             ./modules/default.nix
             nix-flatpak.nixosModules.nix-flatpak
             { nixpkgs.config.allowUnfree = true; }
