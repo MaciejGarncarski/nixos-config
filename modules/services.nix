@@ -3,6 +3,10 @@
   # You can disable this if you're only using the Wayland session.
   services.xserver.enable = false;
 
+  services.xserver.xkb = {
+    layout = "pl";
+  };
+
   # Cosmic DE
   # services.desktopManager.cosmic.enable = false;
   # services.displayManager.cosmic-greeter.enable = false;
