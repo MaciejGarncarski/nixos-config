@@ -14,6 +14,7 @@
 
       # Git
       gdc = "git diff --cached";
+      gdom = "git diff origin/main";
       glog = "git log --oneline";
       gs = "git status";
       gadd = "git add .";

@@ -53,8 +53,7 @@
             theme = "Catppuccin Frappe";
             font-family = "Monaspace Argon";
             font-size = 10;
-            background-opacity = 0.87;
-            background-blur = 20;
+            background-opacity = 0.96;
             unfocused-split-opacity = 0.9;
           };
         };
