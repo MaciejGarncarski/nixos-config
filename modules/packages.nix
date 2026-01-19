@@ -36,6 +36,9 @@
     obsidian
     bruno
     google-chrome
+    (pkgs.google-chrome.override {
+      commandLineArgs = "--password-store=basic";
+    })
     python3 # Required for Node.js ./configure
     gcc # Required for compiling native modules
     gnumake # Required for building
