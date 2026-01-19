@@ -28,19 +28,31 @@
     killall
     libnotify
     lshw
-    nwg-displays # configure monitor configs via GUI
-    onefetch # provides zsaneyos build info on current system
-    pciutils # Collection Of Tools For Inspecting PCI Devices
-    picard # For Changing Music Metadata & Getting Cover Art
-    playerctl # Allows Changing Media Volume Through Scripts
-    socat # Needed For Screenshots
-    unrar # Tool For Handling .rar Files
-    unzip # Tool For Handling .zip Files
-    usbutils # Good Tools For USB Devices
-    wget # Tool For Fetching Files With Links
-    ytmdl # Tool For Downloading Audio From YouTube
-    obsidian # Note taking application
-    bruno # Testing HTTP API
-    google-chrome # Browser
+    fastfetch
+    unrar
+    unzip
+    wget
+    ytmdl
+    obsidian
+    bruno
+    google-chrome
+    python3 # Required for Node.js ./configure
+    gcc # Required for compiling native modules
+    gnumake # Required for building
+    pkg-config # Helps find libraries
+  ];
+
+  # nix-ld for unpached libraries
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    stdenv.cc.cc
+    zlib
+    fuse3
+    icu
+    nss
+    openssl
+    curl
+    expat
+    libxcrypt-legacy
   ];
 }

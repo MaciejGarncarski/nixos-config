@@ -7,6 +7,10 @@
     syntaxHighlighting.enable = true;
     autosuggestions.enable = true;
 
+    interactiveShellInit = ''
+      eval "$(${pkgs.mise}/bin/mise activate zsh)"
+    '';
+
     shellAliases = {
       ls = "eza";
       cat = "bat";
@@ -29,5 +33,6 @@
 
   environment.systemPackages = [
     pkgs.zsh-powerlevel10k
+    pkgs.mise
   ];
 }
