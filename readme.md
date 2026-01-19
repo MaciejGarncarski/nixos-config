@@ -1,17 +1,27 @@
 Use my config
 
-# 1. Git clone
+# 1. Clone config repository
+
+```bash
+
+git clone https://github.com/MaciejGarncarski/nixos-config.git ~/.nixos-config
+
+```
 
 # 2. Generate own hardware-configuration.nix
 
-`nixos-generate-config --show-hardware-config`
+```bash
 
-move output to
+nixos-generate-config --show-hardware-config > hardware-configuration.nix
 
-`hardware-configuration.nix`
+```
 
-# 3. chmod +x ./rebuild.sh
+# 4. Rebuild nixOS
 
-# 4. run ./rebuild.sh
+```bash
 
-Done.
+chmod +x ~/.nixos-config/rebuild.sh
+
+cd ~/.nixos-config && ./rebuild.sh
+
+```
