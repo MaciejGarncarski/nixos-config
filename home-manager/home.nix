@@ -18,6 +18,8 @@
 
         # Additional Packages
         home.packages = with pkgs; [
+          # Cursor AI Editor
+          code-cursor
           vscode
           bun
           discord
