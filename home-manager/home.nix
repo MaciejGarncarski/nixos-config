@@ -27,6 +27,7 @@
           mise
           lazygit
           ripgrep
+          uv
           lazydocker
           fd
           zoxide
