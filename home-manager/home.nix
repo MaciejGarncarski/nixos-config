@@ -22,6 +22,7 @@
           code-cursor
           vscode
           bun
+          deno
           discord
           mise
           lazygit
