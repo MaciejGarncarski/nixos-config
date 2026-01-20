@@ -32,6 +32,7 @@
     unrar
     unzip
     wget
+    vlc # Media player
     ytmdl
     obsidian
     bruno
