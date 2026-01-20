@@ -29,6 +29,8 @@
           ripgrep
           lazydocker
           fd
+          zoxide
+          fzf
           tree
           tldr
           diff-so-fancy
@@ -36,6 +38,12 @@
           nh
           nix-output-monitor
         ];
+
+        home.sessionVariables = {
+          EDITOR = "code --wait";
+          BROWSER = "google-chrome";
+          TERMINAL = "ghostty";
+        };
 
         programs.eza = {
           enable = true;
