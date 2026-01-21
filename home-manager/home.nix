@@ -67,8 +67,10 @@
             font-size = 10;
             background-opacity = 0.95;
             background-blur = "true";
-            window-padding-x = 8;
-            window-padding-y = 2;
+            window-padding-x = 10;
+            window-padding-y = 4;
+            window-width = 102;
+            window-height = 30;
           };
         };
 
