@@ -23,6 +23,8 @@
           vscode
           bun
           deno
+          go
+          act # GitHub Actions Toolkit
           discord
           mise
           lazygit
