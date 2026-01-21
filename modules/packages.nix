@@ -59,4 +59,10 @@
     expat
     libxcrypt-legacy
   ];
+
+  # remove unused packages
+  environment.plasma6.excludePackages = with pkgs; [
+    pkgs.kdePackages.konsole
+    pkgs.kdePackages.elisa
+  ];
 }
