@@ -16,12 +16,7 @@
       {
         home.stateVersion = "25.11";
 
-        home.file = {
-          ".p10k.zsh" = {
-            executable = true;
-            source = ./p10k.zsh;
-          };
-        };  
+        home.file.".p10k.zsh".source = ./p10k.zsh;
 
         # Additional Packages
         home.packages = with pkgs; [
@@ -116,7 +111,7 @@
 
           initContent = lib.mkMerge [
                   (lib.mkBefore ''
-                    [[ ! -f ${./p10k.zsh} ]] || source ${./p10k.zsh}
+                    [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
                   '')
                   (lib.mkAfter ''
                     eval "$(${pkgs.mise}/bin/mise activate zsh)"
