@@ -34,6 +34,12 @@
     unzip
     wget
     vlc # Media player
+    kdePackages.kdenlive # Video editor
+    kdePackages.filelight # Disk usage analyzer
+    handbrake # Video converter
+    ffmpegthumbnailer # Video thumbnails in Dolphin
+    ffmpeg # Video processing
+    imagemagick # Image processing
     ytmdl
     onlyoffice-desktopeditors
     obsidian
