@@ -16,6 +16,13 @@
       {
         home.stateVersion = "25.11";
 
+        home.file = {
+          ".p10k.zsh" = {
+            executable = true;
+            source = ./p10k.zsh;
+          };
+        };  
+
         # Additional Packages
         home.packages = with pkgs; [
           # Cursor AI Editor
@@ -116,19 +123,6 @@
                     bindkey '^[[1;5D' backward-word
                     bindkey '^[[1;5C' forward-word
                   '')
-          ];
-
-          plugins = [
-            {
-              name = "powerlevel10k";
-              src = pkgs.zsh-powerlevel10k;
-              file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
-            }
-            {
-              name = "powerlevel10k-config";
-              src = ./p10k-config;
-              file = "p10k.zsh";
-            }
           ];
 
           shellAliases = {
