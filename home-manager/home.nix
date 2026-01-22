@@ -108,6 +108,9 @@
           autosuggestion.enable = true;
 
           initContent = ''
+            # Change based on repository location
+            source ~/.nix-config/.p10k.zsh
+
             eval "$(${pkgs.mise}/bin/mise activate zsh)"
 
             bindkey '^[[1;5D' backward-word
