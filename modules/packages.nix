@@ -40,6 +40,7 @@
     ffmpegthumbnailer # Video thumbnails in Dolphin
     ffmpeg # Video processing
     imagemagick # Image processing
+    easyeffects # Audio effects processor
     ytmdl
     onlyoffice-desktopeditors
     obsidian
