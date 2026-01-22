@@ -48,6 +48,8 @@
     options = "--delete-older-than 30d";
   };
 
+  custom.bootLoader = "systemd-boot";
+
   nix.settings.auto-optimise-store = true;
 
   # This value determines the NixOS release from which the default

@@ -16,6 +16,10 @@ nixos-generate-config --show-hardware-config > hardware-configuration.nix
 
 ```
 
+# 3. Select boot loader based on your needs.
+
+in `modules/system.nix` find `custom.bootLoader = ` and insert `systemd-boot` or `grub`.
+
 # 4. Rebuild
 
 ```bash
