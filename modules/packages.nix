@@ -17,6 +17,7 @@
   nixpkgs.config.allowUnfree = true;
 
   fonts.packages = with pkgs; [
+    corefonts
     monaspace
     fira-code
     fira-code-symbols
@@ -34,6 +35,7 @@
     wget
     vlc # Media player
     ytmdl
+    onlyoffice-desktopeditors
     obsidian
     bruno
     google-chrome
