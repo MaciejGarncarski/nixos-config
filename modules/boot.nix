@@ -42,7 +42,6 @@ in
       (mkIf (bootLoader == "grub") {
         grub = {
           enable = true;
-          version = 2;
           efiSupport = true;
           device = "nodev";
         };
