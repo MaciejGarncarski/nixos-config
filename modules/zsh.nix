@@ -1,41 +1,10 @@
-{ lib, pkgs, ... }:
+{ pkgs, ... }:
 {
-  programs.zsh = {
-    enable = true;
-    promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
-    enableCompletion = true;
-    syntaxHighlighting.enable = true;
-    autosuggestions.enable = true;
+  # System-level zsh setup
+  programs.zsh.enable = true;
 
-    interactiveShellInit = ''
-      eval "$(${pkgs.mise}/bin/mise activate zsh)"
-
-      bindkey '^[[1;5D' backward-word
-      bindkey '^[[1;5C' forward-word
-    '';
-
-    shellAliases = {
-      ls = "eza";
-      cat = "bat";
-      lg = "lazygit";
-
-      # Git
-      gdc = "git diff --cached";
-      gdom = "git diff origin/main";
-      glog = "git log --oneline";
-      gs = "git status";
-      gadd = "git add .";
-
-      pi = "pnpm install";
-      padd = "pnpm add";
-
-      # Docker
-      doco = "docker compose";
-    };
-  };
-
-  environment.systemPackages = [
-    pkgs.zsh-powerlevel10k
-    pkgs.mise
+  environment.systemPackages = with pkgs; [
+    zsh-powerlevel10k
+    mise
   ];
 }

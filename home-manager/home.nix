@@ -99,6 +99,40 @@
             };
           };
         };
+
+        # Zsh Configuration
+        programs.zsh = {
+          enable = true;
+          enableCompletion = true;
+          syntaxHighlighting.enable = true;
+          autosuggestion.enable = true;
+
+          initContent = ''
+            eval "$(${pkgs.mise}/bin/mise activate zsh)"
+
+            bindkey '^[[1;5D' backward-word
+            bindkey '^[[1;5C' forward-word
+          '';
+
+          shellAliases = {
+            ls = "eza";
+            cat = "bat";
+            lg = "lazygit";
+
+            # Git
+            gdc = "git diff --cached";
+            gdom = "git diff origin/main";
+            glog = "git log --oneline";
+            gs = "git status";
+            gadd = "git add .";
+
+            pi = "pnpm install";
+            padd = "pnpm add";
+
+            # Docker
+            doco = "docker compose";
+          };
+        };
       };
   };
 
