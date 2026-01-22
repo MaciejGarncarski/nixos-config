@@ -107,12 +107,16 @@
           syntaxHighlighting.enable = true;
           autosuggestion.enable = true;
 
-          initContent = ''
-            eval "$(${pkgs.mise}/bin/mise activate zsh)"
-
-            bindkey '^[[1;5D' backward-word
-            bindkey '^[[1;5C' forward-word
-          '';
+          initContent = lib.mkMerge [
+                  (lib.mkBefore ''
+                    [[ ! -f ${./p10k.zsh} ]] || source ${./p10k.zsh}
+                  '')
+                  (''
+                    eval "$(${pkgs.mise}/bin/mise activate zsh)"
+                    bindkey '^[[1;5D' backward-word
+                    bindkey '^[[1;5C' forward-word
+                  '')
+          ];
 
           shellAliases = {
             ls = "eza";
