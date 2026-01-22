@@ -109,15 +109,23 @@
           syntaxHighlighting.enable = true;
           autosuggestion.enable = true;
 
+          plugins = [
+            {
+              name = "powerlevel10k";
+              src = pkgs.zsh-powerlevel10k;
+              file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
+            }
+          ];
+
           initContent = lib.mkMerge [
-                  (lib.mkBefore ''
-                    [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
-                  '')
-                  (lib.mkAfter ''
-                    eval "$(${pkgs.mise}/bin/mise activate zsh)"
-                    bindkey '^[[1;5D' backward-word
-                    bindkey '^[[1;5C' forward-word
-                  '')
+            (lib.mkBefore ''
+              [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+            '')
+            (lib.mkAfter ''
+              eval "$(${pkgs.mise}/bin/mise activate zsh)"
+              bindkey '^[[1;5D' backward-word
+              bindkey '^[[1;5C' forward-word
+            '')
           ];
 
           shellAliases = {
